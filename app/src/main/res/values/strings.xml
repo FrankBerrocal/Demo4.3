@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Demo4.3</string>
+    <string name="delivery_label">Choose your delivery method</string>
+    <string name="editText_label">Enter your Message</string>
+    <string name="author_label">Frank Berrocal ©2023</string>
 </resources>

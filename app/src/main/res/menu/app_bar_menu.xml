@@ -17,7 +17,7 @@
 
         app:showAsAction="never"/>
 
-    <item android:id="@+id/mi_feedbacks"
+    <item android:id="@+id/mi_feedback"
         android:title="Feedback"
         android:icon="@drawable/ic_settings_background"
         app:showAsAction="ifRoom"/>

@@ -1,18 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="30dp"
+    android:paddingHorizontal="60dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="1"
+        android:rowCount="6">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:padding="5dp"
+            android:layout_margin="3dp"
+            android:src="@drawable/android_logo"
+            />
+
+        <TextView
+            android:id="@+id/titleFirst"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="UI Input"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            android:textStyle="italic"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textNotificationFirst"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/delivery_label"
+                android:padding="16dp"
+                android:textAlignment="viewStart"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:typeface="sans"
+                android:textStyle="normal"
+
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:orientation="vertical"
+                android:prompt="@string/delivery_label">
+
+                <RadioButton
+                    android:id="@+id/sameday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Same day messenger service" />
+
+                <RadioButton
+                    android:id="@+id/nextday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Next day ground delivery" />
+
+                <RadioButton
+                    android:id="@+id/pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Pick up" />
+
+            </RadioGroup>
+
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_column="0"
+            android:layout_row="3"
+            >
+            <EditText
+                android:id="@+id/textSendFirst"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="@string/editText_label"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:typeface="sans"
+                android:textStyle="normal"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="match_parent"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FFC107"
+            android:textColorHint="#5C5959"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="SEND"
+            android:textStyle="bold"
+
+            android:onClick="launchSecondActivity"
+            />
+
+        <TextView
+            android:id="@+id/signatureFirst"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:text="@string/author_label"
+            android:textDirection="firstStrong"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+            android:textStyle="normal"
+            android:textAlignment="viewEnd"
+            android:padding="0dp"
+
+            />
+
+    </GridLayout>
+
+</LinearLayout>
